@@ -44,6 +44,9 @@
                     <h2 class="font-semibold text-l text-gray-800 dark:text-gray-200 leading-tight pb-3">
                         {{ __('Edit URLs') }}
                     </h2>
+                    @if ($urls->isEmpty())
+                            <p class="dark:text-gray-200">Apparently there are currently no URLs to edit!</p>
+                    @endif
                     <div class="mt-6 bg-white dark:bg-gray-700 shadow-sm rounded-lg divide-y">
                         @foreach ($urls as $item)
                             <div class="p-6 flex space-x-2">
@@ -97,10 +100,5 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
-
-
-
     </div>
 </x-app-layout>
